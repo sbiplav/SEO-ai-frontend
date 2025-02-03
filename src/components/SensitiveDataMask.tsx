@@ -24,7 +24,7 @@ export const SensitiveDataMask = ({ text }: MaskProps) => {
     <button 
       className="masked-content"
       onClick={() => setMasked(!masked)}
-      style={{ cursor: 'pointer', filter: masked ? 'blur(3px)' : 'none', background: 'none', border: 'none', padding: 0 }}
+      style={{ cursor: 'pointer', filter: masked ? 'none' : 'none', background: 'none', border: 'none', padding: 0, color: 'gray' }}
       aria-label="Toggle mask"
     >
       {masked ? maskText(text) : text}

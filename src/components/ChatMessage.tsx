@@ -1,4 +1,4 @@
-import { SensitiveDataMask } from './SensitiveDataMask';
+import ReactMarkdown from 'react-markdown';
 
 interface MessageProps {
   content: string;
@@ -9,7 +9,7 @@ export const ChatMessage = ({ content, isUser }: MessageProps) => {
   return (
     <div className={`message ${isUser ? 'user' : 'bot'}`}>
       <div className="message-content">
-        <SensitiveDataMask text={content} />
+        <ReactMarkdown children={content} />
       </div>
     </div>
   );
